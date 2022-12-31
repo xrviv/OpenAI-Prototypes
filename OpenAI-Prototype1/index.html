@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Button Position and Color Changer</title>
+</head>
+<body>
+  <button id="btn">Click Me!</button>
+  <style>
+    #btn {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: blue;
+    }
+  </style>
+  <script>
+    const btn = document.getElementById("btn");
+    let x = 50;
+    let y = 50;
+    let colorIndex = 0;
+    const colors = ["blue", "red", "green", "purple", "orange"];
+    btn.addEventListener("click", function() {
+      btn.style.top = `${y}px`;
+      btn.style.left = `${x}px`;
+      btn.style.backgroundColor = colors[colorIndex];
+      x += 50;
+      y += 50;
+      colorIndex = (colorIndex + 1) % colors.length;
+    });
+  </script>
+</body>
+</html>
