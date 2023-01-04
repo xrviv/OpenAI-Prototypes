@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visitor Information</title>
+</head>
+<body>
+  <div id="ip-info">Loading...</div>
+
+  <script>
+    // Make a request to the ipapi API to get the visitor's IP address and location information
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        // Get the div element where we want to display the information
+        const ipInfoElement = document.getElementById('ip-info');
+
+        // Update the div element with the visitor's IP address and country
+        ipInfoElement.innerHTML = `Your IP address is ${data.ip} and you are located in ${data.country_name}`;
+      });
+  </script>
+</body>
+</html>
