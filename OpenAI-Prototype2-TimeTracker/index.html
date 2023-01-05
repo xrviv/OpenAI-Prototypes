@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Tracker</title>
+  </head>
+  <body>
+    <button id="start-button">Start</button>
+    <button id="stop-button">Stop</button>
+
+    <div id="output"></div>
+    <h1 id="timer"></h1>
+
+    <script>
+      const startButton = document.getElementById('start-button');
+      const stopButton = document.getElementById('stop-button');
+      const output = document.getElementById('output');
+      const timer = document.getElementById('timer');
+
+      let startTime;
+      let endTime;
+      let interval;
+      let elapsedTime = 0;
+
+      startButton.addEventListener('click', () => {
+        startTime = new Date();
+        interval = setInterval(() => {
+          output.innerHTML = `Time started: ${startTime.toString()}`;
+          elapsedTime += 1000;
+          const seconds = Math.floor(elapsedTime / 1000) % 60;
+          const minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
+          const hours = Math.floor(elapsedTime / (1000 * 60 * 60)) % 24;
+          timer.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+      });
+
+      stopButton.addEventListener('click', () => {
+        endTime = new Date();
+        clearInterval(interval);
+        output.innerHTML += `<br>Time ended: ${endTime.toString()}`;
+      });
+    </script>
+  </body>
+</html>
