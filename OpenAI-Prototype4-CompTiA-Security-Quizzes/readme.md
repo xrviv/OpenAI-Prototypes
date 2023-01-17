@@ -22,7 +22,7 @@
 3. Run Quizzinator.py (I ran this in pyCharm)
     - It will prompt you for the name of the text file (the file above)
     - It will prompt you for the file name for the output, can be html.
-4. Copy the contents. Starts with '''<form>''', ends with '</form>'
+4. Copy the contents. Starts with <form>, ends with '</form>'
 5. Open template.html, find '<form>' and should end with '</form>'. Paste above it.
 
 ### Notes, bugs and other disclaimers
