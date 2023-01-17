@@ -29,10 +29,10 @@
 - Make sure each question ends with a </div>
 - **Important:** For Question 10, instead of:
 >
-> <button type="button" class="next-btn">Next</button>
+/ <button type="button" class="next-btn">Next</button>
 
 replace with:
-> <button type="submit" class="submit-btn">Next</button>
+/ <button type="submit" class="submit-btn">Next</button>
 
 #### Finally, scroll down a bit
 
