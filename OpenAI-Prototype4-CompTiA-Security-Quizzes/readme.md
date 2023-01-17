@@ -23,22 +23,23 @@
     - It will prompt you for the name of the text file (the file above)
     - It will prompt you for the file name for the output, can be html.
 4. Copy the contents. Starts with 
-- <form> 
-- ends with '</form>'
+- &lt;form&gt; 
+- ends with '&lt;/form&gt;'
 5. Open template.html, 
-- find '<form>' and should end with 
-- </form>. Paste above it.
+- find '&lt;form&gt; and should end with 
+- &lt;/form&gt;. Paste above it.
 
 ### Notes, bugs and other disclaimers
 
-- Make sure each question ends with a '</div>'
+- Make sure each question ends with a '&lt;/div&gt;'
 - **Important:** For Question 10, instead of:
+
 &lt;button&gt; type="button" class="next-btn"&gt;Next&lt;/button&gt;
 
 
 replace with:
 
-- <button type="submit" class="submit-btn">Next</button>
+- &lt;button&gt; type="submit" class="submit-btn">Next&lt;/button&gt;
 
 #### Finally, scroll down a bit
 
