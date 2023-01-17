@@ -33,7 +33,8 @@
 
 - Make sure each question ends with a '</div>'
 - **Important:** For Question 10, instead of:
-- <button type="button" class="next-btn">Next</button>
+&lt;button&gt; type="button" class="next-btn"&gt;Next&lt;/button&gt;
+
 
 replace with:
 
