@@ -5,17 +5,18 @@
 1. git clone this folder
 2. make a 10 item multiple choice quiz with 4 choices each and save it in a text file.
     It should look like this:
->   1. This is quiz question 1
->   A) This is quiz answer 1
->   B) This is quiz answer 2
->   C) This is quiz answer 3
->   D) This is quiz answer 4
+
+>   1. This is quiz question 1<br>
+>   A) This is quiz answer 1<br>
+>   B) This is quiz answer 2<br>
+>   C) This is quiz answer 3<br>
+>   D) This is quiz answer 4<br>
 >
->   2. This is quiz question 2
->   A) This is quiz answer 1
->   B) This is quiz answer 2
->   C) This is quiz answer 3
->   D) This is quiz answer 4
+>   2. This is quiz question 2<br>
+>   A) This is quiz answer 1<br>
+>   B) This is quiz answer 2<br>
+>   C) This is quiz answer 3<br>
+>   D) This is quiz answer 4<br>
 >
 >   (Ideal number is 10)
 3. Run Quizzinator.py (I ran this in pyCharm)
