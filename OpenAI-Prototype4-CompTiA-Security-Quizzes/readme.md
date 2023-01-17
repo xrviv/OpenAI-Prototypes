@@ -22,18 +22,18 @@
 3. Run Quizzinator.py (I ran this in pyCharm)
     - It will prompt you for the name of the text file (the file above)
     - It will prompt you for the file name for the output, can be html.
-4. Copy the contents. Starts with <form>, ends with </form>
-5. Open template.html, find <form> and should end with </form>. Paste above it.
+4. Copy the contents. Starts with '<form>', ends with '</form>'
+5. Open template.html, find '<form>' and should end with '</form>'. Paste above it.
 
 ### Notes, bugs and other disclaimers
 
-- Make sure each question ends with a </div>
+- Make sure each question ends with a '</div>'
 - **Important:** For Question 10, instead of:
-> button type="button" class="next-btn">Next</button>
+> '<button type="button" class="next-btn">Next</button>'
 
 replace with:
 
-> button type="submit" class="submit-btn">Next</button>
+> '<button type="submit" class="submit-btn">Next</button>'
 
 #### Finally, scroll down a bit
 
