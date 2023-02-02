@@ -1,5 +1,5 @@
 # 🤖 OpenAI-Prototypes 🤖
 OpenAI Generated Projects
 
-- I'll start off with html and javascript
-- Move on to Python later
+These are sample projects that OpenAI's GPT3 program can make. 
+Most of these are barely working.
