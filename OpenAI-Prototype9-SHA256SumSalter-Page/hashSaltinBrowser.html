@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHA-256 Hash with Salt</title>
+</head>
+<body>
+    <h1>SHA-256 Hash with Salt</h1>
+    <textarea id="inputData" placeholder="Enter your input data"></textarea><br>
+    <input id="salt" type="text" placeholder="Enter your salt"><br>
+    <button id="hashButton">Generate SHA-256 Hash</button><br>
+    <p>Result:</p>
+    <div id="hashResult"></div>
+
+    <script>
+        const hashButton = document.getElementById("hashButton");
+        const inputData = document.getElementById("inputData");
+        const salt = document.getElementById("salt");
+        const hashResult = document.getElementById("hashResult");
+
+        hashButton.addEventListener("click", () => {
+            const inputDataValue = inputData.value;
+            const saltValue = salt.value;
+
+            if (inputDataValue && saltValue) {
+                // Combine input and salt
+                const dataToHash = inputDataValue + saltValue;
+
+                // Create a SHA-256 hash
+                crypto.subtle.digest("SHA-256", new TextEncoder().encode(dataToHash))
+                    .then(buffer => {
+                        const hashArray = Array.from(new Uint8Array(buffer));
+                        const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, "0")).join("");
+                        hashResult.innerText = `SHA-256 Hash with Salt: ${hashHex}`;
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            } else {
+                hashResult.innerText = "Please enter both input data and salt.";
+            }
+        });
+    </script>
+</body>
+</html>
